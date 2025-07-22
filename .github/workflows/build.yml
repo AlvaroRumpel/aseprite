@@ -109,7 +109,7 @@ jobs:
         $XVFB bash run-tests.sh
     - name: Upload Windows Artifact
       if: runner.os == 'Windows' && matrix.ui == 'gui' && matrix.scripting == 'lua' && matrix.build_type == 'RelWithDebInfo'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4.6.2
       with:
         name: aseprite-windows
         path: build/bin/
